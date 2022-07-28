@@ -1,4 +1,4 @@
-class Battleship
+class Battleships
 
   def ship_list
     ship_list = {
