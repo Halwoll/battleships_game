@@ -2,10 +2,11 @@ class Ships
 
   def initialize
     @ship = [ ]
+    # @ship_size = [ ]
   end
 
-  def ship_size
-    ship_size = {
+  def all_ship_size
+    all_ship_size = {
       "Carrier" => 5,
       "Battleship" => 4,
       "Cruiser" => 3,
@@ -14,24 +15,44 @@ class Ships
     }
   end
 
-  def select_carrier
+  def carrier
     (@ship << "Carrier").uniq.pop
   end
 
-  def select_battleship
+  def carrier_size
+    all_ship_size["Carrier"]
+  end
+
+  def battleship
     (@ship << "Battleship").uniq.pop
   end
 
-  def select_cruiser
+  def battleship_size
+    all_ship_size["Battleship"]
+  end
+
+  def cruiser
     (@ship << "Cruiser").uniq.pop
   end
 
-  def select_submarine
+  def cruiser_size
+    all_ship_size["Cruiser"]
+  end
+
+  def submarine
     (@ship << "Submarine").uniq.pop
   end
 
-  def select_destroyer
+  def submarine_size
+    all_ship_size["Submarine"]
+  end
+
+  def destroyer
     (@ship << "Destroyer").uniq.pop
+  end
+
+  def destroyer_size
+    all_ship_size["Destroyer"]
   end
   
 end
