@@ -2,7 +2,6 @@ class Ships
 
   def initialize
     @ship = [ ]
-    # @ship_size = [ ]
   end
 
   def all_ship_size
