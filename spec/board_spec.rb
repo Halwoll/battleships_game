@@ -7,7 +7,7 @@ describe Board do
       expect(board.column).to eql(10)
       expect(board.squares).to eql(1)
     end
-    it "lays out the squares in a grid formation along width and length" do
+    it "labels the width and length" do
       board = Board.new
       expect(board.row_label).to eql(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
       expect(board.column_label).to eql(["A", "B" , "C", "D", "E", "F", "G", "H", "I", "J"])
