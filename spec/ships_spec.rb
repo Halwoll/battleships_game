@@ -13,7 +13,7 @@ describe Ships do
       expect(ship.all_ship_size).to eql(expected_ship_size)
     end
   end
-  context "gives the ability to select a single ship and see it's size"do
+  context "gives the ability to select a single ship"do
     it "allows you to select an individual ship" do
       ship = Ships.new
       ship.select_ship("Carrier")
