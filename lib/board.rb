@@ -1,3 +1,4 @@
+require 'ships'
 class Board
 
   def initialize(row = 10, column = 10, squares = 1)
@@ -18,6 +19,10 @@ class Board
 
   def grid
     @row * @column
+  end
+
+  def placed_on_board
+    @ship
   end
   
 end

@@ -1,4 +1,5 @@
 require 'board'
+require 'ships'
 describe Board do
   context "given a board to play on" do
     it "returns a board with dimensions" do
@@ -7,6 +8,7 @@ describe Board do
       expect(board.row).to eql(10)
       expect(board.column).to eql(10)
     end
+
     it "labels the width and length" do
       board = Board.new
       expected_row_label = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
@@ -14,9 +16,13 @@ describe Board do
       expect(board.row_label).to eql(expected_row_label)
       expect(board.column_label).to eql(expected_column_label)
     end
-    it "lays the squares in a grid fashion" do
-      board = Board.new
-      expect(board.grid).to eql(10*10)
-    end
   end
+
+  # context "creates the ability to play on the board" do
+  #   it "expects the ships to be individually placed on the board" do
+  #     board = Board.new
+  #     ship = Ships.new
+  #     expect(ship).to respond_to(placed_on_board)
+  #   end
+  # end
 end
