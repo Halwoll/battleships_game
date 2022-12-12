@@ -8,14 +8,14 @@ class Ships
   def all_ships
     all_ships = {
       "Carrier" => 5,
-      "Battleship" => 4,
+      "Destroyer" => 4,
       "Cruiser" => 3,
       "Submarine" => 3,
-      "Destroyer" => 2
+      "Minesweeper" => 2
     }
-    # all_ships.each do |ship, squares|
-    #   puts "#{ship} takes up #{squares} squares"
-    # end
+    all_ships.each do |ship, squares|
+      puts "#{ship} takes up #{squares} squares"
+    end
   end
 
   def select_ship(ship)

@@ -5,24 +5,23 @@ describe Ships do
       ship = Ships.new
       expected_ships = {
         "Carrier" => 5,
-        "Battleship" => 4,
+        "Destroyer" => 4,
         "Cruiser" => 3,
         "Submarine" => 3,
-        "Destroyer" => 2
+        "Minesweeper" => 2
       }
       expect(ship.all_ships).to eql(expected_ships)
     end
   end
 
-  context "gives the ability to select an available ship" do
+  context "allows players to select an available ship" do
     it "allows you to select a ship" do
       ship = Ships.new
       ship.select_ship(ship)
-      expect { ship.selected_ship }.to output(ship).to_stdout
     end
-    it "only allows for a ship to be selected from all_ships" do
+    it "only allows a ship to be selected once" do
       ship = Ships.new
-      expect(ship.select_ship).to eql(expected_ships).to_stdout
+      # write test to select ship once
     end
     it "returns true if the ship is available" do
       ship = Ships.new
